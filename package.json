@@ -7,11 +7,11 @@
     "doc": "docs"
   },
   "scripts": {
-    "compile:sass": "node-sass ./src/sass -o ./docs/css --output-style compressed --source-map true",
+    "compile:sass": "node-sass src/sass -o docs/css --output-style compressed --source-map true",
     "lint:sass": "stylelint \"src/**/*.scss\"",
     "format:sass": "stylelint --fix \"src/**/*.scss\"",
-    "mq": "postcss ./src/sass/style.scss -u css-mqpacker -o ./docs/css/style.css",
-    "autoprefix": "postcss ./src/sass/style.scss -u autoprefixer -o ./docs/css/style.css",
+    "mq": "postcss src/sass/style.scss -u css-mqpacker -o docs/css/style.css",
+    "autoprefix": "postcss src/sass/style.scss -u autoprefixer -o docs/css/style.css",
     "allrun": "run-s format:sass compile:sass mq autoprefix",
     "watch:sass": "chokidar \"src/sass\" --command \"npm run allrun\"",
     "build": "webpack",

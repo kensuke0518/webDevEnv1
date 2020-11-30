@@ -12,6 +12,6 @@
   \*************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements:  */
-eval("(function () {\n  console.log('Hello,World');\n});\n\n//# sourceURL=webpack://portfolioModules/./src/js/index.js?");
+eval("var js = function js() {\n  //console.log('Hello,World');\n  document.getElementById('js').style.color = 'lightgreen';\n};\n\njs();\n\n//# sourceURL=webpack://portfolioModules/./src/js/index.js?");
 /******/ })()
 ;
