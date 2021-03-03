@@ -1,9 +1,9 @@
 /* ==========================================================================
 Foundation - @import "foundation/
 ========================================================================== */
-@import "foundation/_variable";
-@import "foundation/_reset";
-@import "foundation/_base";
+@import "foundation/variable";
+@import "foundation/reset";
+@import "foundation/base";
 
 /* ==========================================================================
 Layout - @import "layout/
@@ -26,6 +26,6 @@ Project - @import "object/project/ - 接頭辞[p-]
 /* -----------------------------------------------------------------
 Utility - @import "object/utility - 接頭辞[u-]
 ----------------------------------------------------------------- */
-@import "object/utility/_margin";
-@import "object/utility/_padding";
-@import "object/utility/_text";
+@import "object/utility/margin";
+@import "object/utility/padding";
+@import "object/utility/text";
