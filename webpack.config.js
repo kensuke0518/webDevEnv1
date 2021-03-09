@@ -1,7 +1,7 @@
 module.exports = {
     mode: 'development',
     entry: {
-        'index': './src/js/index.js', //'index'がoutputの[name]になる
+        'index': './src/js/index.js', //'index'がoutputの[name]になる。複数jsを出力したい場合は'index'の部分の名前を変えると[name]に反映される
     },
     output: {
         path: `${__dirname}/docs/js`,
