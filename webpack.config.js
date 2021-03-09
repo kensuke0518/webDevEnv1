@@ -1,9 +1,11 @@
 module.exports = {
     mode: 'development',
-    entry: './src/js/index.js',
+    entry: {
+        'index': './src/js/index.js', //'index'がoutputの[name]になる
+    },
     output: {
         path: `${__dirname}/docs/js`,
-        filename: 'index.js'
+        filename: '[name].js'
     },
     module: {
         rules: [
