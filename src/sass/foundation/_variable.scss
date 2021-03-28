@@ -1,17 +1,29 @@
+//コンテンツ幅（ウインドウを狭めた際に横スクロールするとwidth:100%の背景色が切れる問題の解消のため）
+$siteContentWidth:1200px;
+
+//メディアクエリ
+$breakpoints: (
+  'sm': 'screen and (max-width: 400px)',
+  'md': 'screen and (max-width: 600px)',
+  'lg': 'screen and (max-width: 1000px)',
+) !default;
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+//色：mapとfunctionの定義
 /*
 色については次のことを検討したい
 - CSS変数対応。@function対応。lighten()関数対応。透過対応。明度（hsba）対応。
 */
-
-//色：mapとfunctionの定義
 $themeColor:#dc143c;
 $siteBgColor:#fff;
 $siteColor:#707070;
 $darkBgColor:#282c34;
 $darkColor:#fff;
 $linkColor:#8dcbf2;
-
-
 $colors:(
     siteBgC:(
         base:$siteBgColor,
@@ -48,29 +60,17 @@ $colors:(
     @return map-get(map-get($colors,$key), $tone);
 }
 
-//メディアクエリ
-$breakpoints: (
-  'sm': 'screen and (max-width: 400px)',
-  'md': 'screen and (max-width: 600px)',
-  'lg': 'screen and (max-width: 1000px)',
-) !default;
-@mixin mq($breakpoint: md) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
-
-//スマホ時の改行調整
-@media screen and (min-width: 600px){
-  .br-sp {display: none; }
-}
-
 //CSSカスタム変数
 :root{
+    //色のカスタム変数を用いる理由は、SCSSでRGBAやHSBAやHSLAの色指定を扱いたかったから？
     --bgcolor: #{$siteBgColor};
     --textcolor:#{$siteColor};
     &[data-colormode="dark"]{
         --bgcolor:#{$darkBgColor};
         --textcolor:#{$darkColor};
     }
+}
+//スマホ時の改行調整
+@media screen and (min-width: 600px){
+  .br-sp {display: none; }
 }
