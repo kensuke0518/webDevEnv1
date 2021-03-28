@@ -6,9 +6,9 @@ $paddingNum:"";
     @else{
         $paddingNum:"#{$i}";
     }
-    .u-pt#{$paddingNum}{padding-top:#{$paddingNum}px;}
-    .u-pr#{$paddingNum}{padding-right:#{$paddingNum}px;}
-    .u-pb#{$paddingNum}{padding-bottom:#{$paddingNum}px;}
-    .u-pl#{$paddingNum}{padding-left:#{$paddingNum}px;}
-    .u-p#{$paddingNum}{padding:#{$paddingNum}px;}
+    .u-pt#{$paddingNum}{padding-top:#{$paddingNum}px !important;}
+    .u-pr#{$paddingNum}{padding-right:#{$paddingNum}px !important;}
+    .u-pb#{$paddingNum}{padding-bottom:#{$paddingNum}px !important;}
+    .u-pl#{$paddingNum}{padding-left:#{$paddingNum}px !important;}
+    .u-p#{$paddingNum}{padding:#{$paddingNum}px !important;}
 } 
