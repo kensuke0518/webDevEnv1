@@ -15,6 +15,7 @@
     "allrun": "run-s format:sass compile:sass mq autoprefix",
     "watch:sass": "chokidar \"src/**/*.scss\" --command \"npm run allrun\"",
     "build": "webpack",
+    "bandle:webpack": "webpack --watch --mode=development --devtool=source-map",
     "watch:webpack": "webpack -w",
     "browsersync": "browser-sync start -s docs -w docs/*/*.html docs/*/*.css docs/*/*.js",
     "watch": "npm run watch:sass & npm run watch:webpack & npm run browsersync"
