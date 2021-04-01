@@ -2,7 +2,7 @@ const sortOrderSmacss = require('stylelint-config-property-sort-order-smacss/gen
 
 module.exports = {
     plugins: [
-        stylelint - order,
+        "stylelint-order",
     ],
     extends: [
         'stylelint-config-recommended',
