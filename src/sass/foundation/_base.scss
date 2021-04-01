@@ -5,7 +5,6 @@ html{
         font-size: 50%;
     }
 }
-
 body{
     min-width: $siteContentWidth;
     background: var(--bgcolor);
@@ -24,11 +23,6 @@ body{
         min-width: 0;
     }
 }
-body.gmenu-is-open{
-    height: 100vh;
-    padding-right: 15px;
-    overflow-y: hidden;
-}
 a{
     transition: color 250ms ease, opacity 250ms ease;
     color: color(linkC,base);
@@ -42,6 +36,11 @@ ul{
 }
 img{
     vertical-align: bottom;
+    @include mq(){
+        width:100%;
+        max-width: 100%;
+        height: auto;
+    }
 }
 *,
 *::before,
